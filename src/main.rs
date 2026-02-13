@@ -1,4 +1,18 @@
 fn main() {
+    let s = String::from("Sheryar Tahir");
+    let (s, len) = calculate_len(s);
+
+    println!("The len of {s} is {len}");
+
+}
+
+fn calculate_len(s: String) -> (String, usize) {
+    let result = s.len();
+    (s, result)
+}
+
+/* 
+fn main() {
     let num = 15;
     let result = add(num);
     let s = gives_ownership();
@@ -28,3 +42,4 @@ fn takes_and_gives_back(s: String) -> String {
 fn add(x: i32) -> i32 {
     x + 10
 }
+*/
