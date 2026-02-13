@@ -1,3 +1,26 @@
+/* Slice Type */
+fn main() {
+    let s = String::from("HelloWorld");
+    let res = find_first_word(&s);
+
+    println!("For String {s} the Result is {}", res.len());
+
+}
+
+fn find_first_word(input: &String) -> &str {
+    let s = input.as_bytes();
+
+    for (i, &item) in s.iter().enumerate() {
+        if item == b' ' {
+            return &input[..i];
+        }
+    }
+    &input[..]
+}
+
+
+
+/*  Referncing
 fn main() {
     let mut s1 = String::from("Sheryar Tahir");
     let len = calculate_length(&mut s1);
@@ -11,8 +34,7 @@ fn calculate_length(s: &mut String) -> usize {
     s.push_str(" Hello World");
     s.len()
 }
-
-
+*/
 
 
 
