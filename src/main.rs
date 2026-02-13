@@ -1,15 +1,30 @@
 fn main() {
-    let s = String::from("Sheryar Tahir");
-    let (s, len) = calculate_len(s);
+    let mut s1 = String::from("Sheryar Tahir");
+    let len = calculate_length(&mut s1);
+    s1.push_str(" ABC");
 
-    println!("The len of {s} is {len}");
+    println!("The len of {s1} is {len}");
 
 }
 
-fn calculate_len(s: String) -> (String, usize) {
-    let result = s.len();
-    (s, result)
+fn calculate_length(s: &mut String) -> usize {
+    s.push_str(" Hello World");
+    s.len()
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 
 fn main() {
